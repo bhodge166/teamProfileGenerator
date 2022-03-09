@@ -1,8 +1,3 @@
-const Employee = require("../lib/Employee");
-const Engineer = require("../lib/Engineer");
-const Intern = require("../lib/Intern");
-const Manager = require("../lib/Manager");
-
 function generateHtml(team) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -14,7 +9,7 @@ function generateHtml(team) {
     <title>My team</title>
 </head>
 <body>
-<h1 class= "bg-danger text-align-center justify-content-center>My team</h1>
+<h1 class= "bg-danger text-white text-center p-5 mb-4 bg-opacity-75">My Team</h1>
 <main class = "container">
     <section class = "row">
     ${team
@@ -30,19 +25,3 @@ function generateHtml(team) {
 }
 
 module.exports = generateHtml;
-<div class="col-sm-6">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body bg-primary text-light">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
-  </div>
-</div>;

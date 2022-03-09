@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
@@ -89,7 +88,7 @@ function addEmployee() {
     .then((data) => {
       if (data.choice === "Add an employee") {
         inquirer.prompt(employeeQuestions).then((data) => {
-          if ((data.role = "Engineer")) {
+          if (data.role === "Engineer") {
             const employee = new Engineer(
               data.name,
               data.id,
@@ -115,7 +114,8 @@ function addEmployee() {
 }
 
 function createHtml() {
-  console.log("Hello");
+  console.log("Generating html");
+  fs.writeFileSync("./dist/myTeam.html", generateHtml(team));
 }
 
 main();

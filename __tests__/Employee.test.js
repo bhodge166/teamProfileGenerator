@@ -27,6 +27,14 @@ describe("test for employee class", () => {
     expect(emp.email).toEqual(email);
   });
 
+  it("Should have a role property when instantiated", () => {
+    const name = "Molly";
+    const id = 10;
+    const email = "molly@mail.com";
+    const emp = new Employee(name, id, email);
+    expect(emp.role).toEqual("Employee");
+  });
+
   //test methods
   it("Should return the name of the object when getName method is invoked", () => {
     const name = "Molly";
@@ -58,5 +66,13 @@ describe("test for employee class", () => {
     const email = "molly@mail.com";
     const emp = new Employee(name, id, email);
     expect(emp.getRole()).toEqual("Employee");
+  });
+
+  it("Should return a string when the generateCard method is called", () => {
+    const name = "Molly";
+    const id = 10;
+    const email = "molly@mail.com";
+    const emp = new Employee(name, id, email);
+    expect(typeof emp.generateCard()).toEqual("string");
   });
 });
